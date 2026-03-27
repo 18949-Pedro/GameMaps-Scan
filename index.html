@@ -1267,16 +1267,17 @@ O amuleto Criança Grimm pode ser substituído pelo amuleto Melodia Despreocupad
                 `
             }
         };
- 
+
         function showMain() {
             document.getElementById('main-screen').classList.remove('hidden');
             document.getElementById('hollow-knight-section').classList.remove('active');
             document.getElementById('silksong-section').classList.remove('active');
-            
+            document.getElementById('pap-project-section').classList.remove('active');
             // Hide content areas
             document.getElementById('hk-content').classList.remove('active');
             document.getElementById('ss-content').classList.remove('active');
-        }
+            document.getElementById('ss-content').classList.remove('active');
+          }
  
         function showGame(game) {
             document.getElementById('main-screen').classList.add('hidden');
@@ -1284,9 +1285,11 @@ O amuleto Criança Grimm pode ser substituído pelo amuleto Melodia Despreocupad
             if (game === 'hollow-knight') {
                 document.getElementById('hollow-knight-section').classList.add('active');
                 document.getElementById('hk-content').classList.remove('active');
-            } else {
+            } else if (game === 'silksong') {
                 document.getElementById('silksong-section').classList.add('active');
                 document.getElementById('ss-content').classList.remove('active');
+            } else if (game === 'pap-project') {
+                document.getElementById('pap-project-section').classList.add('active');
             }
         }
  
